@@ -1,0 +1,17 @@
+@import "../../assets/styling/media.scss";
+@import "../../assets/styling/flexMix.scss";
+@import "../../assets/styling/theme.scss";
+
+.cart-page {
+    @include flexMix(unset, center, unset);
+    background-color: $colorS-Dark;
+    height: 100vh;
+
+    &__card {
+        @include flexMix(row, center, unset);
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 80%;
+        background-color: $colorS-Dark;
+    }
+}

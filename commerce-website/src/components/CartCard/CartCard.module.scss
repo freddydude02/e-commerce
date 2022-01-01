@@ -1,0 +1,16 @@
+@import "../../assets/styling/flexMix.scss";
+
+.cart-card {
+    @include flexMix(column, unset, unset);
+
+    &__img {
+        height: 200px;
+        width: 200px;
+    }
+    &__title {
+    }
+    &__price {
+    }
+    &__description {
+    }
+}
