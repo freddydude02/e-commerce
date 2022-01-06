@@ -28,16 +28,3 @@ const Grid = () => {
     );
 };
 export default Grid;
-// <button
-//     onClick={() => {
-//         create({
-//             description: "it's black leather shoes",
-//             price: 120,
-//             id: "black-leather-shoes",
-//             img: "https://media.istockphoto.com/photos/elegant-black-leather-shoes-picture-id172417586?b=1&k=20&m=172417586&s=170667a&w=0&h=D26AYo2w8U1729-GJ3swMOq5QfthijDxW6cjVCVGOU8=",
-//             name: "Black leather shoes",
-//         });
-//     }}
-// >
-//     create
-// </button>

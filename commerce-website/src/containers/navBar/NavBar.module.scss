@@ -9,11 +9,12 @@
 
     &__link-box {
         @include flexMix(row, center, unset);
-        background-color: $colorSecondary;
-        border: solid 2px;
+        // background-color: $colorSecondary;
+        // border: solid 2px;
         width: 100px;
     }
     &__link {
         text-decoration: none;
+        color: $colorTextOnP;
     }
 }

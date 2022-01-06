@@ -3,15 +3,22 @@
 @import "../../assets/styling/theme.scss";
 
 .cart-page {
-    @include flexMix(unset, center, unset);
-    background-color: $colorS-Dark;
-    height: 100vh;
+    @include flexMix(column, unset, center);
+    background-color: $colorS-Light;
+    height: 100em;
+    width: 100%;
 
-    &__card {
-        @include flexMix(row, center, unset);
+    &__grid {
+        @include flexMix(column, center, unset);
         flex-wrap: wrap;
         gap: 20px;
         width: 80%;
-        background-color: $colorS-Dark;
+        background-color: $colorS-Light;
+        margin-top: 50px;
+    }
+    &__checkout {
+        @include flexMix(column, center, center);
+        border-top: black 2px solid;
+        width: 100vw;
     }
 }

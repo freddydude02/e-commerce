@@ -1,12 +1,24 @@
-import { update, increment } from "../../services/firebase-utils";
+import { update, deleteDoc } from "../../services/firebase-utils";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartData";
 import styles from "./CartCounter.module.scss";
 const CartCounter = ({ item }) => {
+    const cartInfo = useContext(CartContext);
+
+    const clickHandler = (value) => {
+        update(item.fieldId, { qty: item.qty + value });
+        cartInfo.updateCart === 1
+            ? cartInfo.setUpdateCart(0)
+            : cartInfo.setUpdateCart(1);
+    };
+
+    // console.log(item.qty);
     return (
         <div className={styles["cart-counter"]}>
             <button
                 className={styles["cart-counter__btn"]}
                 onClick={() => {
-                    update(item.fieldId, { qty: increment(-1) });
+                    clickHandler(-1);
                 }}
             >
                 -
@@ -15,7 +27,7 @@ const CartCounter = ({ item }) => {
             <button
                 className={styles["cart-counter__btn"]}
                 onClick={() => {
-                    update(item.fieldId, { qty: increment(1) });
+                    clickHandler(1);
                 }}
             >
                 +

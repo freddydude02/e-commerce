@@ -1,22 +1,28 @@
-import { increment, readAll, update } from "../../services/firebase-utils";
-import { useState, useEffect } from "react";
+import { readAll } from "../../services/firebase-utils";
+import { useEffect, useContext } from "react";
+import { CartContext } from "../../context/CartData";
 import CartCard from "../../components/CartCard/CartCard";
-import CartCounter from "../../components/CartCounter";
 import styles from "./Cart.module.scss";
 
 const Cart = () => {
-    const [cartData, setCartData] = useState([]);
-
-    useEffect(() => readAll("cart", setCartData), []);
-
-    // update(cartData.fieldId)
+    const cartInfo = useContext(CartContext);
+    useEffect(() => readAll("cart", cartInfo.setCartData), []);
 
     return (
         <div className={styles["cart-page"]}>
-            <div className={styles["cart-page__card"]}>
-                {cartData.map((item, i) => (
+            <div className={styles["cart-page__grid"]}>
+                {cartInfo.cartData.map((item, i) => (
                     <CartCard key={i} item={item}></CartCard>
                 ))}
+            </div>
+            <div className={styles["cart-page__checkout"]}>
+                <h1>
+                    total checkout price:
+                    {cartInfo.cartData.length &&
+                        cartInfo.cartData
+                            .map((item) => item.price * item.qty)
+                            .reduce((a, b) => a + b)}
+                </h1>
             </div>
         </div>
     );

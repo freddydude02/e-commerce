@@ -1,9 +1,13 @@
-$colorPrimary: rgb(84, 69, 59);
-$colorP-Light: rgb(118, 90, 71);
-$colorP-Dark: rgb(61, 51, 44);
-$colorSecondary: rgb(189, 163, 146);
-$colorS-Light: rgb(255, 255, 255);
-$colorS-Dark: rgb(147, 127, 114);
+// navbar
+$colorPrimary: rgb(16, 15, 15);
+$colorP-Light: rgb(230, 104, 20);
+$colorP-Dark: rgb(107, 46, 5);
+// cards
+$colorSecondary: rgb(167, 166, 166);
+
+// main bg
+$colorS-Light: rgb(204, 204, 204);
+$colorS-Dark: rgb(79, 34, 124);
 $colorTextOnP: white;
 $colorTextOnS: black;
 * {

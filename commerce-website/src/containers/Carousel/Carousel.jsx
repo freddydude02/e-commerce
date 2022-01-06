@@ -19,19 +19,23 @@ const CarouselDisplay = () => {
     ];
 
     return (
-        <div className={styles["carousel-page"]}>
-            <h3>Popular "posh" collection</h3>
-            <Carousel breakPoints={breakPoints}>
-                {Promo("posh").map((item, i) => (
-                    <Card key={i} item={item}></Card>
-                ))}
-            </Carousel>
-            <h3>Popular "cool" collection</h3>
-            <Carousel breakPoints={breakPoints}>
-                {Promo("cool").map((item, i) => (
-                    <Card key={i} item={item}></Card>
-                ))}
-            </Carousel>
+        <div className={styles.page}>
+            <div className={styles.page__carousel}>
+                <h3>Popular "posh" collection</h3>
+                <Carousel breakPoints={breakPoints}>
+                    {Promo("posh").map((item, i) => (
+                        <Card key={i} item={item}></Card>
+                    ))}
+                </Carousel>
+            </div>
+            <div className={styles.page__carousel}>
+                <h3>Popular "cool" collection</h3>
+                <Carousel breakPoints={breakPoints}>
+                    {Promo("cool").map((item, i) => (
+                        <Card key={i} item={item}></Card>
+                    ))}
+                </Carousel>
+            </div>
         </div>
     );
 };

@@ -1,10 +1,14 @@
 @import "../../assets/styling/flexMix.scss";
-
+@import "../../assets/styling/theme.scss";
 .cart-card {
-    @include flexMix(column, unset, unset);
+    @include flexMix(row, unset, unset);
 
     &__img {
         height: 200px;
+        width: 200px;
+    }
+    &__details {
+        @include flexMix(column, center, center);
         width: 200px;
     }
     &__title {

@@ -3,7 +3,7 @@
 .product-page {
     @include flexMix(column, unset, center);
     height: 100vh;
-    background-color: $colorS-Dark;
+    background-color: $colorS-Light;
 
     &__img {
         height: 300px;

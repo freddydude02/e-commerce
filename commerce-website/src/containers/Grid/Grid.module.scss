@@ -2,26 +2,21 @@
 @import "../../assets/styling/flexMix.scss";
 @import "../../assets/styling/theme.scss";
 .grid-container {
-    @include flexMix(unset, center, unset);
-    background-color: $colorS-Dark;
+    @include flexMix(row, center, flex-start);
+    background-color: $colorS-Light;
+    height: 100%;
+    width: 100%;
+    @include mqdesktopxl {
+        height: 100vh;
+    }
 }
 
 .card-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
     @include flexMix(row, center, unset);
     flex-wrap: wrap;
     gap: 20px;
     width: 80%;
-    background-color: $colorS-Dark;
-
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // @include mqtablet {
-    //     grid-template-columns: 1fr 1fr;
-    // }
-    // @include mqdesktop {
-    //     grid-template-columns: 1fr 1fr 1fr;
-    // }
-    // @include mqdesktopxl {
-    //     grid-template-columns: 1fr 1fr 1fr 1fr;
-    // }
+    background-color: $colorS-Light;
 }
