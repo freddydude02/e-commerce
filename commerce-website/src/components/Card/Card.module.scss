@@ -1,0 +1,19 @@
+@import "../../assets/styling/flexMix.scss";
+@import "../../assets/styling/media.scss";
+@import "../../assets/styling/theme.scss";
+.card {
+    @include flexMix(column, center, center);
+    background-color: $colorSecondary;
+    width: 220px;
+    height: 320px;
+    &__img {
+        height: 200px;
+        width: 200px;
+    }
+    &__title {
+    }
+    &__price {
+    }
+    &__description {
+    }
+}

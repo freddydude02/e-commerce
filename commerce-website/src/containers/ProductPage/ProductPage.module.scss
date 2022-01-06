@@ -1,0 +1,11 @@
+@import "../../assets/styling/flexMix.scss";
+@import "../../assets/styling/theme.scss";
+.product-page {
+    @include flexMix(column, unset, center);
+    height: 100vh;
+    background-color: $colorS-Light;
+
+    &__img {
+        height: 300px;
+    }
+}

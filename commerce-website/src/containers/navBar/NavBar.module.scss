@@ -1,0 +1,20 @@
+@import "../../assets/styling/flexMix.scss";
+@import "../../assets/styling/theme.scss";
+.navbar {
+    @include flexMix(row, space-evenly, center);
+    background-color: $colorPrimary;
+    border: 2px solid;
+    height: 50px;
+    list-style: none;
+
+    &__link-box {
+        @include flexMix(row, center, unset);
+        // background-color: $colorSecondary;
+        // border: solid 2px;
+        width: 100px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $colorTextOnP;
+    }
+}

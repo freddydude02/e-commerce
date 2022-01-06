@@ -1,0 +1,22 @@
+@import "../../assets/styling/media.scss";
+@import "../../assets/styling/flexMix.scss";
+@import "../../assets/styling/theme.scss";
+.grid-container {
+    @include flexMix(row, center, flex-start);
+    background-color: $colorS-Light;
+    height: 100%;
+    width: 100%;
+    @include mqdesktopxl {
+        height: 100vh;
+    }
+}
+
+.card-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @include flexMix(row, center, unset);
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    background-color: $colorS-Light;
+}
